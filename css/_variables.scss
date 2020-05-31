@@ -1,0 +1,38 @@
+//SCREEN SIZES
+$screen-mobile: 48em;
+$screen-tablet: 62em;
+$screen-desktop: 75em;
+
+//SPACING
+$pad: 2rem;
+$pad-xxs: calc(#{$pad}/10);
+$pad-xs: calc(#{$pad}/2.5);
+$pad-sm: calc(#{$pad}/2);
+$pad-lg: calc(#{$pad} * 2);
+$pad-xlg: calc(#{$pad} * 2.5);
+
+//COLORS
+$color-1: #F2EFEA;
+$color-2: #F4F4F5;
+$color-3: #FC7753;
+$color-4: #F69484;
+$color-5: #F0B77F;
+$color-6: #FDCEA2;
+$color-7: #0A3A54;
+$color-8: #413E58;
+
+//BORDERS AND SHAPES
+$border-radius: 45px;
+$circle: 50%;
+$border: solid 3px;
+$shadow:  0px 0px 45px rgba(0, 0, 0, 0.08);
+$shadow-dark:  0px 0px 55px rgba(0, 0, 0, 0.9);
+
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@100;200;400;600;800;900&display=swap');
+$font-primary: 'DM Serif Display', serif;
+$font-secondary: 'Inter', sans-serif;
+
+$font-lg: 16px;
+$font-md: 14px;
+$font-sm: 12px;

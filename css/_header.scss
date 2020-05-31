@@ -1,0 +1,26 @@
+.header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: $pad-sm;
+  align-items: flex-start;
+
+  &__logo {
+    width: 3em;
+  }
+
+  &__title {
+    max-width: 500px;
+  }
+
+  &__subtitle {
+    line-height: 0;
+    font-family: $font-secondary;
+    font-size: 2em;
+    font-weight: 200;
+    color: $color-8;
+  }
+
+  h1 {
+    line-height: 0.8;
+  }
+}
