@@ -1,0 +1,24 @@
+---
+layout: default
+title:  Portfolio
+---
+
+<div class="intro">
+<p>Hello! I am Beau, a UX designer and project lead with over 15 years of experience in te digital product field. Here are some some selected samples of my work, writings, and talks. Thank you for visiting!</p>
+</div>
+
+<div class="work__grid">
+  {% assign sorted = (site.content | sort: 'order') %}
+  {% for work in sorted %}
+    <a href="{{ work.article_path }}" class="card work--{{ work.type }}" {% if work.type == "work" %}{% else %}target="_blank"{% endif %}>
+      {% if work.type == "article" %}
+        <h3>{{ work.title }}</h3>
+      {% else %}
+      {% endif %}
+      <div class="work__image">
+        <p class="work__type">{{ work.type }}</p>
+      </div>
+      <img src="{{ work.image }}" alt="{{ work.title }}" />
+    </a>
+  {% endfor %}
+</div>

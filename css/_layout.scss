@@ -1,3 +1,23 @@
 body {
   background-color: $color-1;
 }
+
+.intro {
+  margin: $pad-sm $pad;
+  max-width: 700px;
+
+  @media screen and (min-width: $screen-tablet) {
+    margin: $pad-lg $pad-xlg;
+  }
+}
+
+.content {
+  &--work {
+    img {
+      max-width: 800px;
+      border-radius: 25px;
+      margin: $pad-lg;
+      border: solid 5px lighten($color-2, 2%);
+    }
+  }
+}
