@@ -23,9 +23,24 @@ body {
       border: solid 5px lighten($color-2, 2%);
 
       @media screen and (min-width: $screen-desktop) {
-        margin: $pad-lg;
+        margin: $pad;
         max-width: 800px;
       }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+
+    img {
+      max-width: 85%;
+    }
+
+    @media screen and (min-width: $screen-desktop) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

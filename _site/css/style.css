@@ -96,8 +96,25 @@ body {
 
 @media screen and (min-width: 75em) {
   .content--work img {
-    margin: calc(2rem * 2);
+    margin: 2rem;
     max-width: 800px;
+  }
+}
+
+.content__grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+
+.content__grid img {
+  max-width: 85%;
+}
+
+@media screen and (min-width: 75em) {
+  .content__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -255,6 +272,12 @@ body {
   padding: calc(2rem/2.5) calc(2rem/2);
 }
 
+@media screen and (min-width: 62em) {
+  .header {
+    grid-template-columns: max-content 1fr;
+  }
+}
+
 .header__logo {
   margin-top: 6px;
   width: 2.5em;
@@ -262,7 +285,6 @@ body {
 
 @media screen and (min-width: 62em) {
   .header__logo {
-    grid-template-columns: max-content 1fr;
     width: 3em;
   }
 }
