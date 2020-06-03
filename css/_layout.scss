@@ -1,5 +1,7 @@
 body {
   background-color: $color-1;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .intro {
@@ -13,11 +15,17 @@ body {
 
 .content {
   &--work {
+
     img {
-      max-width: 800px;
+      max-width: 90%;
       border-radius: 25px;
-      margin: $pad-lg;
+      margin: $pad-sm auto;
       border: solid 5px lighten($color-2, 2%);
+
+      @media screen and (min-width: $screen-desktop) {
+        margin: $pad-lg;
+        max-width: 800px;
+      }
     }
   }
 }

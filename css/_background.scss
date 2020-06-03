@@ -1,21 +1,29 @@
 .background {
   position: absolute;
-  top: 250vh;
+  top: 120vh;
   left: 0;
   bottom: auto;
-  width: 100vw;
-  height: 100vh;
+  width: 126vw;
+  height: 180vh;
   z-index: -1;
   transform: scale(0.8, 0.8);
+  overflow-x: hidden;
+  overflow-y: visible;
+  margin: 0 -43px;
 
   @media screen and (min-width: $screen-tablet) {
     top: 160vh;
     transform: scale(1.2, 1.2);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
   }
 
   @media screen and (min-width: 1350px) {
     position: fixed;
     top: 0;
+    width: 100vw;
+    height: 100vh;
     transform: scale(1.0, 1.0);
   }
 

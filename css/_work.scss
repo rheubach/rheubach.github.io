@@ -65,6 +65,7 @@ a.card {
   &__image {
     z-index: 5;
     position: relative;
+    max-width: 100%;
   }
 
   &--work, &--talk {

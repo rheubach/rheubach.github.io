@@ -8,12 +8,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 2.6em;
   line-height: 1;
   letter-spacing: 2px;
   font-weight: 400;
   margin: 0;
   color: #0A3A54;
+  word-break: break-all;
 }
 
 @media screen and (min-width: 62em) {
@@ -70,6 +71,8 @@ a:hover span {
 
 body {
   background-color: #F2EFEA;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .intro {
@@ -84,27 +87,40 @@ body {
 }
 
 .content--work img {
-  max-width: 800px;
+  max-width: 90%;
   border-radius: 25px;
-  margin: calc(2rem * 2);
+  margin: calc(2rem/2) auto;
   border: solid 5px #f9f9fa;
+}
+
+@media screen and (min-width: 75em) {
+  .content--work img {
+    margin: calc(2rem * 2);
+    max-width: 800px;
+  }
 }
 
 .background {
   position: absolute;
-  top: 250vh;
+  top: 120vh;
   left: 0;
   bottom: auto;
-  width: 100vw;
-  height: 100vh;
+  width: 126vw;
+  height: 180vh;
   z-index: -1;
   transform: scale(0.8, 0.8);
+  overflow-x: hidden;
+  overflow-y: visible;
+  margin: 0 -43px;
 }
 
 @media screen and (min-width: 62em) {
   .background {
     top: 160vh;
     transform: scale(1.2, 1.2);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
   }
 }
 
@@ -112,6 +128,8 @@ body {
   .background {
     position: fixed;
     top: 0;
+    width: 100vw;
+    height: 100vh;
     transform: scale(1, 1);
   }
 }
@@ -230,7 +248,7 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 1fr;
   grid-gap: calc(2rem/2);
   align-items: flex-start;
   padding: calc(2rem/2.5) calc(2rem/2);
@@ -238,11 +256,12 @@ body {
 
 .header__logo {
   margin-top: 6px;
-  width: 4em;
+  width: 2.5em;
 }
 
 @media screen and (min-width: 62em) {
   .header__logo {
+    grid-template-columns: max-content 1fr;
     width: 3em;
   }
 }
@@ -348,6 +367,7 @@ a.card img {
 .work__image {
   z-index: 5;
   position: relative;
+  max-width: 100%;
 }
 
 .work--work, .work--talk {
