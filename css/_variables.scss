@@ -12,14 +12,15 @@ $pad-lg: calc(#{$pad} * 2);
 $pad-xlg: calc(#{$pad} * 2.5);
 
 //COLORS
-$color-1: #F2EFEA;
-$color-2: #F4F4F5;
+$color-1: #fffefd;
+$color-2: #f8feff;
 $color-3: #FC7753;
 $color-4: #F69484;
 $color-5: #F0B77F;
 $color-6: #FDCEA2;
 $color-7: #0A3A54;
 $color-8: #413E58;
+$color-9: lighten($color-7, 10%);
 
 //BORDERS AND SHAPES
 $border-radius: 45px;

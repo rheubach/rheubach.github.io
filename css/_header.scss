@@ -36,6 +36,7 @@
   }
 
   h1 {
+    color: $color-9;
     line-height: 0.8;
   }
 }
@@ -46,14 +47,20 @@
     a {
       svg {
         max-width: 2em;
-        fill: $color-5;
+        fill: $color-3;
       }
 
       &:hover {
         svg {
-          fill: $color-3;
+          fill: $color-8;
         }
       }
     }
+  }
+}
+
+.title {
+  @media screen and (min-width: $screen-tablet) {
+    margin: 0 $pad-lg 0;
   }
 }

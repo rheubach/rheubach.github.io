@@ -38,14 +38,14 @@ h3 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.8;
   letter-spacing: 1px;
 }
 
 @media screen and (min-width: 62em) {
   p {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
@@ -71,7 +71,7 @@ a:hover span {
 }
 
 body {
-  background-color: #F2EFEA;
+  background-color: #fffefd;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -89,9 +89,9 @@ body {
 
 .content--work img {
   max-width: 90%;
-  border-radius: 25px;
+  border-radius: 10px;
   margin: calc(2rem/2) auto;
-  border: solid 5px #f9f9fa;
+  border: solid 5px white;
 }
 
 @media screen and (min-width: 75em) {
@@ -309,16 +309,23 @@ body {
 }
 
 .header h1 {
+  color: #0f5982;
   line-height: 0.8;
 }
 
 .social__nav a svg {
   max-width: 2em;
-  fill: #F0B77F;
+  fill: #FC7753;
 }
 
 .social__nav a:hover svg {
-  fill: #FC7753;
+  fill: #413E58;
+}
+
+@media screen and (min-width: 62em) {
+  .title {
+    margin: 0 calc(2rem * 2) 0;
+  }
 }
 
 a.card {
@@ -332,10 +339,10 @@ a.card {
   padding: 2rem;
   overflow: hidden;
   transform: scale(1, 1);
-  border: solid 5px #f9f9fa;
-  border-radius: 25px;
-  background-color: #F4F4F5;
-  box-shadow: 0px 0px 35px rgba(10, 58, 84, 0.05);
+  border: solid 5px white;
+  border-radius: 10px;
+  background-color: #f8feff;
+  box-shadow: 0px 0px 35px rgba(10, 58, 84, 0.1);
   color: #413E58;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -349,8 +356,8 @@ a.card {
 }
 
 a.card:hover {
-  transform: scale(1.05, 1.05);
-  border-color: #FC7753;
+  transform: scale(0.9, 0.9);
+  border-color: #413E58;
   box-shadow: 0px 0px 35px rgba(10, 58, 84, 0.1);
   transition: all 0.4s ease;
 }
@@ -361,7 +368,7 @@ a.card img {
 }
 
 .work__grid {
-  grid-gap: calc(2rem * 2) 2rem;
+  grid-gap: 100px calc(2rem * 2);
   width: 100vw;
 }
 
@@ -381,8 +388,8 @@ a.card img {
   margin: calc(2rem/2) 0;
   padding: 2px 25px;
   border-radius: 25px;
-  background-color: #F0B77F;
-  color: #F4F4F5;
+  background-color: #FC7753;
+  color: #f8feff;
   font-size: 1em;
   font-weight: 600;
   text-transform: uppercase;
@@ -405,7 +412,7 @@ a.card img {
 .work--work h3, .work--talk h3 {
   z-index: 5;
   position: relative;
-  font-size: 3em;
+  font-size: 1.5em;
 }
 
 .work--work img, .work--talk img {

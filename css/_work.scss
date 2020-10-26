@@ -10,9 +10,9 @@ a.card {
   overflow: hidden;
   transform: scale(1.0, 1.0);
   border: solid 5px lighten($color-2, 2%);
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: $color-2;
-  box-shadow: 0px 0px 35px rgba($color-7, 0.05);
+  box-shadow: 0px 0px 35px rgba($color-7, 0.1);
   color: $color-8;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -23,8 +23,8 @@ a.card {
   }
 
   &:hover {
-    transform: scale(1.05, 1.05);
-    border-color: $color-3;
+    transform: scale(0.90, 0.90);
+    border-color: $color-8;
     box-shadow: 0px 0px 35px rgba($color-7, 0.1);
     transition: all 0.4s ease;
   }
@@ -38,7 +38,7 @@ a.card {
 
 .work {
   &__grid {
-    grid-gap: $pad-lg $pad;
+    grid-gap: 100px $pad-lg;
     width: 100vw;
 
     @media screen and (min-width: $screen-desktop) {
@@ -56,7 +56,7 @@ a.card {
     margin: $pad-sm 0;
     padding: 2px 25px;
     border-radius: 25px;
-    background-color: $color-5;
+    background-color: $color-3;
     color: $color-2;
     font-size: 1em;
     font-weight: 600;
@@ -79,7 +79,7 @@ a.card {
     h3 {
       z-index: 5;
       position: relative;
-      font-size: 3em;
+      font-size: 1.5em;
     }
 
     img {
