@@ -1,12 +1,17 @@
 .header {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: $pad-sm;
-  align-items: flex-start;
-  padding: $pad-xs $pad-sm;
+  padding: 0;
+  margin: 0;
 
-  @media screen and (min-width: $screen-tablet) {
-    grid-template-columns: max-content 1fr;
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $pad-sm;
+    align-items: flex-start;
+    padding: $pad-xs 0;
+
+    @media screen and (min-width: $screen-tablet) {
+      grid-template-columns: max-content 1fr;
+    }
   }
 
   &__logo {
@@ -23,15 +28,23 @@
   }
 
   &__subtitle {
-    line-height: 1;
-    margin: 20px 0;
-    font-family: $font-secondary;
-    font-size: 1.1em;
-    font-weight: 200;
-    color: $color-8;
+    width: 100vw;
+    margin: 0 0 $pad-sm;
+    padding: $pad-xxs $pad-sm $pad-xxs $pad-xlg;
+    box-sizing: border-box;
+    background-color: $color-8;
 
-    @media screen and (min-width: $screen-tablet) {
-      font-size: 2em;
+    h2 {
+      line-height: 1;
+      margin: 20px 0;
+      font-family: $font-secondary;
+      font-size: 0.8em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $color-1;
+      @media screen and (min-width: $screen-tablet) {
+        font-size: 1.5em;
+      }
     }
   }
 
@@ -61,6 +74,6 @@
 
 .title {
   @media screen and (min-width: $screen-tablet) {
-    margin: 0 $pad-lg 0;
+    margin: 0 $pad-xlg 0;
   }
 }

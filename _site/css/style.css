@@ -13,10 +13,9 @@ h1 {
   letter-spacing: 2px;
   font-weight: 400;
   margin: 0;
-  color: #0A3A54;
+  color: #0c2134;
   word-break: break-all;
 }
-
 @media screen and (min-width: 62em) {
   h1 {
     font-size: 6em;
@@ -42,7 +41,6 @@ p {
   line-height: 1.8;
   letter-spacing: 1px;
 }
-
 @media screen and (min-width: 62em) {
   p {
     font-size: 1.3em;
@@ -54,36 +52,34 @@ a {
   text-decoration: none;
   transform: all 0.5s ease;
   font-weight: 600;
-  color: #0A3A54;
+  color: #0c2134;
 }
-
 a span {
   color: #F0B77F;
 }
-
 a:hover {
   transform: scale(0.9, 0.9);
-  color: #FC7753;
+  color: #bb141b;
 }
-
 a:hover span {
-  color: #FC7753;
+  color: #bb141b;
 }
 
 body {
-  background-color: #fffefd;
+  background-color: #eff6f8;
   width: 100vw;
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .intro {
   margin: calc(2rem/2) 2rem;
   max-width: 700px;
 }
-
 @media screen and (min-width: 62em) {
   .intro {
-    margin: calc(2rem * 2) calc(2rem * 2.5);
+    margin: 2rem calc(2rem * 2.5) 0;
   }
 }
 
@@ -93,25 +89,21 @@ body {
   margin: calc(2rem/2) auto;
   border: solid 5px white;
 }
-
 @media screen and (min-width: 75em) {
   .content--work img {
     margin: 2rem;
     max-width: 800px;
   }
 }
-
 .content__grid {
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   grid-template-columns: 1fr;
 }
-
 .content__grid img {
   max-width: 85%;
 }
-
 @media screen and (min-width: 75em) {
   .content__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -131,7 +123,6 @@ body {
   overflow-y: visible;
   margin: 0 -43px;
 }
-
 @media screen and (min-width: 62em) {
   .background {
     top: 160vh;
@@ -141,7 +132,6 @@ body {
     margin: auto;
   }
 }
-
 @media screen and (min-width: 1350px) {
   .background {
     position: fixed;
@@ -155,50 +145,41 @@ body {
 .blob {
   position: absolute;
 }
-
 .blob--blue {
   bottom: -500px;
   right: -350px;
   transform: rotate(0deg);
 }
-
 .blob--blue svg {
   width: 1200px;
   height: 1200px;
 }
-
 .blob--blue path {
   animation: morpheus 35s linear infinite;
 }
-
 .blob--orange {
   top: 25px;
   right: -200px;
   transform: rotate(0deg);
 }
-
 .blob--orange svg {
   width: 550px;
   height: 550px;
 }
-
 .blob--orange path {
-  animation: morpheus2 25s linear  infinite;
+  animation: morpheus2 25s linear infinite;
 }
-
 .blob--purple {
   top: -500px;
   right: -350px;
   transform: rotate(360deg);
 }
-
 .blob--purple svg {
   width: 1200px;
   height: 1200px;
 }
-
 .blob--purple path {
-  animation: morpheus3 30s linear  infinite;
+  animation: morpheus3 30s linear infinite;
 }
 
 @keyframes morpheus {
@@ -215,7 +196,6 @@ body {
     d: path("M42.9,-70.4C53.4,-60,58.2,-44.4,66.1,-29.5C73.9,-14.6,84.7,-0.4,83.1,12.1C81.5,24.6,67.4,35.4,56.1,49.1C44.9,62.7,36.5,79.3,24.4,82.7C12.3,86,-3.5,76,-18.2,68.7C-32.8,61.3,-46.2,56.5,-54.8,47.2C-63.5,37.9,-67.2,24,-67.3,10.9C-67.3,-2.3,-63.5,-14.8,-60.5,-30.2C-57.4,-45.6,-55.1,-63.9,-45.2,-74.5C-35.2,-85.2,-17.6,-88.1,-0.7,-87C16.2,-85.9,32.4,-80.7,42.9,-70.4Z");
   }
 }
-
 @keyframes morpheus2 {
   0% {
     d: path("M46.1,-58C58.1,-54.7,65.1,-39.1,70.6,-22.8C76,-6.6,79.8,10.3,75.7,25.1C71.6,39.9,59.5,52.6,45.6,54.4C31.6,56.3,15.8,47.3,3.5,42.5C-8.8,37.7,-17.6,37,-26.7,33.6C-35.9,30.2,-45.3,24,-51.7,14.4C-58.2,4.8,-61.7,-8.2,-58.8,-19.8C-56,-31.4,-46.8,-41.6,-35.9,-45.3C-25.1,-49,-12.5,-46.2,2.2,-49.3C17,-52.4,34.1,-61.4,46.1,-58Z");
@@ -230,7 +210,6 @@ body {
     d: path("M46.1,-58C58.1,-54.7,65.1,-39.1,70.6,-22.8C76,-6.6,79.8,10.3,75.7,25.1C71.6,39.9,59.5,52.6,45.6,54.4C31.6,56.3,15.8,47.3,3.5,42.5C-8.8,37.7,-17.6,37,-26.7,33.6C-35.9,30.2,-45.3,24,-51.7,14.4C-58.2,4.8,-61.7,-8.2,-58.8,-19.8C-56,-31.4,-46.8,-41.6,-35.9,-45.3C-25.1,-49,-12.5,-46.2,2.2,-49.3C17,-52.4,34.1,-61.4,46.1,-58Z");
   }
 }
-
 @keyframes morpheus3 {
   0% {
     d: path("M19.9,-36.5C25.5,-31.2,29.5,-25.3,38,-19.1C46.4,-12.9,59.3,-6.5,61.9,1.5C64.6,9.5,57,19,50.4,28.5C43.9,38.1,38.5,47.7,30.3,58.2C22,68.6,11,80,0.2,79.6C-10.6,79.2,-21.2,67.1,-27.7,55.6C-34.2,44.2,-36.6,33.4,-44.8,24.2C-52.9,15,-66.8,7.5,-72,-3C-77.2,-13.5,-73.7,-27,-68.4,-41.1C-63.1,-55.2,-55.9,-69.8,-44.2,-71.6C-32.5,-73.3,-16.3,-62.2,-4.6,-54.3C7.1,-46.4,14.3,-41.7,19.9,-36.5Z");
@@ -245,7 +224,6 @@ body {
     d: path("M19.9,-36.5C25.5,-31.2,29.5,-25.3,38,-19.1C46.4,-12.9,59.3,-6.5,61.9,1.5C64.6,9.5,57,19,50.4,28.5C43.9,38.1,38.5,47.7,30.3,58.2C22,68.6,11,80,0.2,79.6C-10.6,79.2,-21.2,67.1,-27.7,55.6C-34.2,44.2,-36.6,33.4,-44.8,24.2C-52.9,15,-66.8,7.5,-72,-3C-77.2,-13.5,-73.7,-27,-68.4,-41.1C-63.1,-55.2,-55.9,-69.8,-44.2,-71.6C-32.5,-73.3,-16.3,-62.2,-4.6,-54.3C7.1,-46.4,14.3,-41.7,19.9,-36.5Z");
   }
 }
-
 @keyframes rotateClock {
   0% {
     transform: rotate(0deg);
@@ -254,7 +232,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 @keyframes rotateCounter {
   0% {
     transform: rotate(360deg);
@@ -263,68 +240,71 @@ body {
     transform: rotate(0deg);
   }
 }
-
 .header {
+  padding: 0;
+  margin: 0;
+}
+.header__content {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: calc(2rem/2);
   align-items: flex-start;
-  padding: calc(2rem/2.5) calc(2rem/2);
+  padding: calc(2rem/2.5) 0;
 }
-
 @media screen and (min-width: 62em) {
-  .header {
+  .header__content {
     grid-template-columns: max-content 1fr;
   }
 }
-
 .header__logo {
   margin-top: 6px;
   width: 2.5em;
 }
-
 @media screen and (min-width: 62em) {
   .header__logo {
     width: 3em;
   }
 }
-
 .header__title {
   max-width: 500px;
 }
-
 .header__subtitle {
+  width: 100vw;
+  margin: 0 0 calc(2rem/2);
+  padding: calc(2rem/10) calc(2rem/2) calc(2rem/10) calc(2rem * 2.5);
+  box-sizing: border-box;
+  background-color: #1a28d3;
+}
+.header__subtitle h2 {
   line-height: 1;
   margin: 20px 0;
   font-family: "Inter", sans-serif;
-  font-size: 1.1em;
-  font-weight: 200;
-  color: #413E58;
+  font-size: 0.8em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #eff6f8;
 }
-
 @media screen and (min-width: 62em) {
-  .header__subtitle {
-    font-size: 2em;
+  .header__subtitle h2 {
+    font-size: 1.5em;
   }
 }
-
 .header h1 {
-  color: #0f5982;
+  color: #163b5d;
   line-height: 0.8;
 }
 
 .social__nav a svg {
   max-width: 2em;
-  fill: #FC7753;
+  fill: #bb141b;
 }
-
 .social__nav a:hover svg {
-  fill: #413E58;
+  fill: #1a28d3;
 }
 
 @media screen and (min-width: 62em) {
   .title {
-    margin: 0 calc(2rem * 2) 0;
+    margin: 0 calc(2rem * 2.5) 0;
   }
 }
 
@@ -342,26 +322,23 @@ a.card {
   border: solid 5px white;
   border-radius: 10px;
   background-color: #f8feff;
-  box-shadow: 0px 0px 35px rgba(10, 58, 84, 0.1);
-  color: #413E58;
+  box-shadow: 0px 0px 35px rgba(12, 33, 52, 0.1);
+  color: #1a28d3;
   text-decoration: none;
   transition: all 0.4s ease;
 }
-
 @media screen and (min-width: 75em) {
   a.card {
     width: 100%;
     margin: 0;
   }
 }
-
 a.card:hover {
   transform: scale(0.9, 0.9);
-  border-color: #413E58;
-  box-shadow: 0px 0px 35px rgba(10, 58, 84, 0.1);
+  border-color: #1a28d3;
+  box-shadow: 0px 0px 35px rgba(12, 33, 52, 0.1);
   transition: all 0.4s ease;
 }
-
 a.card img {
   align-self: flex-end;
   width: 100%;
@@ -371,7 +348,6 @@ a.card img {
   grid-gap: 100px calc(2rem * 2);
   width: 100vw;
 }
-
 @media screen and (min-width: 75em) {
   .work__grid {
     display: grid;
@@ -380,7 +356,6 @@ a.card img {
     margin: calc(2rem * 2) 2rem;
   }
 }
-
 .work__type {
   display: inline-block;
   z-index: 5;
@@ -388,33 +363,28 @@ a.card img {
   margin: calc(2rem/2) 0;
   padding: 2px 25px;
   border-radius: 25px;
-  background-color: #FC7753;
+  background-color: #bb141b;
   color: #f8feff;
   font-size: 1em;
   font-weight: 600;
   text-transform: uppercase;
 }
-
 .work__image {
   z-index: 5;
   position: relative;
   max-width: 100%;
 }
-
 .work--work, .work--talk {
   grid-column: span 2;
 }
-
 .work--work .work__type, .work--talk .work__type {
-  background-color: #FC7753;
+  background-color: #bb141b;
 }
-
 .work--work h3, .work--talk h3 {
   z-index: 5;
   position: relative;
   font-size: 1.5em;
 }
-
 .work--work img, .work--talk img {
   z-index: -1;
   position: absolute;
@@ -423,7 +393,6 @@ a.card img {
   width: 180% !important;
   transform: translateY(-50%) translateX(-50%);
 }
-
 @media screen and (min-width: 75em) {
   .work--work img, .work--talk img {
     width: 120% !important;

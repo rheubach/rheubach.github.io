@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }} {{ page.title }}</title>
+
+  <SCRIPT language="JavaScript">
+    var password; 
+    var pass1="Heubach2023"; 
+    password=prompt('Enter Password',' '); 
+    if (password==pass1) 
+    alert('Correct Password! Click OK to Enter!'); 
+    else { window.location="/"; 
+    } 
+    </SCRIPT>
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}">
+</head>
