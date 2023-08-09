@@ -9,11 +9,11 @@ a.card {
   padding: $pad;
   overflow: hidden;
   transform: scale(1.0, 1.0);
-  border: solid 5px lighten($color-2, 2%);
+  border: solid 8px lighten($color-7, 15%);
   border-radius: 10px;
   background-color: $color-2;
   box-shadow: 0px 0px 35px rgba($color-7, 0.1);
-  color: $color-8;
+  color: $color-7;
   text-decoration: none;
   transition: all 0.4s ease;
 
@@ -24,7 +24,8 @@ a.card {
 
   &:hover {
     transform: scale(0.90, 0.90);
-    border-color: $color-8;
+    border-color: $color-3;
+    color: $color-8;
     box-shadow: 0px 0px 35px rgba($color-7, 0.1);
     transition: all 0.4s ease;
   }
@@ -56,8 +57,8 @@ a.card {
     margin: $pad-sm 0;
     padding: 2px 25px;
     border-radius: 25px;
-    background-color: $color-3;
-    color: $color-2;
+    background-color: $color-8;
+    color: $color-1;
     font-size: 1em;
     font-weight: 600;
     text-transform: uppercase;
@@ -71,10 +72,6 @@ a.card {
 
   &--work, &--talk {
     grid-column: span 2;
-
-    .work__type {
-      background-color: $color-3;
-    }
 
     h3 {
       z-index: 5;

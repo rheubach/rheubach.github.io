@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@100;200;400;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 h1, h2, h3, h4 {
-  font-family: "DM Serif Display", serif;
+  font-family: "Noto Serif Display", serif;
 }
 
 h1 {
   font-size: 2.6em;
   line-height: 1;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
-  color: #0c2134;
+  color: #eff6f8;
   word-break: break-all;
 }
 @media screen and (min-width: 62em) {
@@ -40,6 +40,7 @@ p {
   font-size: 1.1em;
   line-height: 1.8;
   letter-spacing: 1px;
+  color: #eff6f8;
 }
 @media screen and (min-width: 62em) {
   p {
@@ -52,21 +53,30 @@ a {
   text-decoration: none;
   transform: all 0.5s ease;
   font-weight: 600;
-  color: #0c2134;
+  color: #eff6f8;
+  transition: all 0.5s ease;
 }
 a span {
-  color: #F0B77F;
+  padding-top: calc(2rem/2);
+  color: #F3654D;
+  transform: scale(1, 1);
+  transition: all 0.5s ease;
+  vertical-align: middle;
 }
 a:hover {
   transform: scale(0.9, 0.9);
-  color: #bb141b;
+  color: #F3654D;
+  transition: all 0.5s ease;
 }
 a:hover span {
-  color: #bb141b;
+  color: #F3654D;
+  font-size: 1.5rem;
+  transform: scale(1.2, 1.2);
+  transition: all 0.5s ease;
 }
 
 body {
-  background-color: #eff6f8;
+  background-color: #0c2134;
   width: 100vw;
   overflow-x: hidden;
   padding: 0;
@@ -83,6 +93,10 @@ body {
   }
 }
 
+.content {
+  position: relative;
+  z-index: 3;
+}
 .content--work img {
   max-width: 90%;
   border-radius: 10px;
@@ -94,6 +108,15 @@ body {
     margin: 2rem;
     max-width: 800px;
   }
+}
+.content__quote {
+  color: #eff6f8;
+  grid-column: 1/3;
+  padding: calc(2rem * 2);
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Noto Serif Display", serif;
+  background-color: rgba(26, 40, 211, 0.95);
 }
 .content__grid {
   display: grid;
@@ -112,33 +135,27 @@ body {
 
 .background {
   position: absolute;
-  top: 120vh;
-  left: 0;
-  bottom: auto;
-  width: 126vw;
-  height: 180vh;
-  z-index: -1;
-  transform: scale(0.8, 0.8);
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1, 1);
+  margin: auto;
   overflow-x: hidden;
-  overflow-y: visible;
-  margin: 0 -43px;
+  overflow-y: hidden;
+  z-index: 0;
 }
 @media screen and (min-width: 62em) {
   .background {
-    top: 160vh;
-    transform: scale(1.2, 1.2);
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 1350px) {
-  .background {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100vw;
     height: 100vh;
     transform: scale(1, 1);
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    z-index: 2;
   }
 }
 
@@ -242,14 +259,39 @@ body {
 }
 .header {
   padding: 0;
-  margin: 0;
+  margin: 500px 0 0;
+}
+@media screen and (min-width: 62em) {
+  .header {
+    margin: 0;
+  }
+}
+.header__section {
+  position: relative;
+  z-index: 3;
+  padding: calc(2rem/10) calc(2rem/2) calc(2rem/10) calc(2rem/2);
+}
+@media screen and (min-width: 62em) {
+  .header__section {
+    padding: calc(2rem/10) calc(2rem/2) calc(2rem/10) calc(2rem * 2.5);
+  }
 }
 .header__content {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: calc(2rem/2);
   align-items: flex-start;
   padding: calc(2rem/2.5) 0;
+  z-index: 3;
+}
+.header__content.top {
+  margin: calc(2rem * 2) calc(2rem/2) 0;
+}
+@media screen and (min-width: 62em) {
+  .header__content.top {
+    margin: calc(2rem * 2) 0 0;
+  }
 }
 @media screen and (min-width: 62em) {
   .header__content {
@@ -266,19 +308,29 @@ body {
   }
 }
 .header__title {
+  position: relative;
   max-width: 500px;
+  z-index: 3;
 }
 .header__subtitle {
+  position: relative;
   width: 100vw;
   margin: 0 0 calc(2rem/2);
-  padding: calc(2rem/10) calc(2rem/2) calc(2rem/10) calc(2rem * 2.5);
+  letter-spacing: 4px;
+  padding: calc(2rem/10) calc(2rem/2) calc(2rem/10) calc(2rem/2);
   box-sizing: border-box;
-  background-color: #1a28d3;
+  background-color: rgba(26, 40, 211, 0.9);
+  z-index: 1;
+}
+@media screen and (min-width: 62em) {
+  .header__subtitle {
+    padding: calc(2rem/10) calc(2rem/2) calc(2rem/10) calc(2rem * 2.5);
+  }
 }
 .header__subtitle h2 {
   line-height: 1;
   margin: 20px 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 0.8em;
   font-weight: 800;
   text-transform: uppercase;
@@ -290,13 +342,18 @@ body {
   }
 }
 .header h1 {
-  color: #163b5d;
-  line-height: 0.8;
+  color: #eff6f8;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
+.social__nav {
+  position: relative;
+  z-index: 3;
+}
 .social__nav a svg {
   max-width: 2em;
-  fill: #bb141b;
+  fill: #F3654D;
 }
 .social__nav a:hover svg {
   fill: #1a28d3;
@@ -319,11 +376,11 @@ a.card {
   padding: 2rem;
   overflow: hidden;
   transform: scale(1, 1);
-  border: solid 5px white;
+  border: solid 8px #1a4872;
   border-radius: 10px;
   background-color: #f8feff;
   box-shadow: 0px 0px 35px rgba(12, 33, 52, 0.1);
-  color: #1a28d3;
+  color: #0c2134;
   text-decoration: none;
   transition: all 0.4s ease;
 }
@@ -335,7 +392,8 @@ a.card {
 }
 a.card:hover {
   transform: scale(0.9, 0.9);
-  border-color: #1a28d3;
+  border-color: #F3654D;
+  color: #1a28d3;
   box-shadow: 0px 0px 35px rgba(12, 33, 52, 0.1);
   transition: all 0.4s ease;
 }
@@ -363,8 +421,8 @@ a.card img {
   margin: calc(2rem/2) 0;
   padding: 2px 25px;
   border-radius: 25px;
-  background-color: #bb141b;
-  color: #f8feff;
+  background-color: #1a28d3;
+  color: #eff6f8;
   font-size: 1em;
   font-weight: 600;
   text-transform: uppercase;
@@ -376,9 +434,6 @@ a.card img {
 }
 .work--work, .work--talk {
   grid-column: span 2;
-}
-.work--work .work__type, .work--talk .work__type {
-  background-color: #bb141b;
 }
 .work--work h3, .work--talk h3 {
   z-index: 5;
@@ -398,9 +453,5 @@ a.card img {
     width: 120% !important;
   }
 }
-
-/*
- * css styles go here
- */
 
 /*# sourceMappingURL=style.css.map */

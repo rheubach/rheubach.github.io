@@ -1,13 +1,37 @@
 .header {
   padding: 0;
-  margin: 0;
+  margin: 500px 0 0;
+
+  @media screen and (min-width: $screen-tablet) {
+    margin: 0;
+  }
+
+  &__section {
+    position: relative;
+    z-index: 3;
+    padding: $pad-xxs $pad-sm $pad-xxs $pad-sm;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding: $pad-xxs $pad-sm $pad-xxs $pad-xlg;
+    }
+  }
 
   &__content {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $pad-sm;
     align-items: flex-start;
     padding: $pad-xs 0;
+    z-index: 3;
+
+    &.top {
+      margin: $pad-lg $pad-sm 0;
+
+      @media screen and (min-width: $screen-tablet) {
+        margin: $pad-lg 0 0;
+      }
+    }
 
     @media screen and (min-width: $screen-tablet) {
       grid-template-columns: max-content 1fr;
@@ -24,15 +48,24 @@
   }
 
   &__title {
+    position: relative;
     max-width: 500px;
+    z-index: 3;
   }
 
   &__subtitle {
+    position: relative;
     width: 100vw;
     margin: 0 0 $pad-sm;
-    padding: $pad-xxs $pad-sm $pad-xxs $pad-xlg;
+    letter-spacing: 4px;
+    padding: $pad-xxs $pad-sm $pad-xxs $pad-sm;
     box-sizing: border-box;
-    background-color: $color-8;
+    background-color: rgba($color-8, 0.9);
+    z-index: 1;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding: $pad-xxs $pad-sm $pad-xxs $pad-xlg;
+    }
 
     h2 {
       line-height: 1;
@@ -49,13 +82,16 @@
   }
 
   h1 {
-    color: $color-9;
-    line-height: 0.8;
+    color: $color-1;
+    line-height: 1;
+    margin-bottom: 1rem;
   }
 }
 
 .social {
   &__nav {
+    position: relative;
+    z-index: 3;
 
     a {
       svg {
